@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - StyleMatch</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎨 StyleMatch</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="tests.html" class="nav-link">Mis Tests</a></li>
+                <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                <li><a href="costureros.html" class="nav-link">Costureros</a></li>
+                <li><a href="profile.html" class="nav-link active">Mi Perfil</a></li>
+                <li><a href="index.html" class="btn-nav">Cerrar Sesión</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="profile-main">
+        <div class="container">
+            <div class="profile-header">
+                <h1>Mi Perfil</h1>
+                <p>Gestiona tu información personal y preferencias</p>
+            </div>
+
+            <div class="profile-content">
+                <!-- Sidebar de Navegación -->
+                <aside class="profile-sidebar">
+                    <nav class="profile-nav">
+                        <ul>
+                            <li><a href="#informacion" class="profile-nav-link active" data-tab="informacion">📝 Información Personal</a></li>
+                            <li><a href="#preferencias" class="profile-nav-link" data-tab="preferencias">🎨 Mis Preferencias</a></li>
+                            <li><a href="#resultados" class="profile-nav-link" data-tab="resultados">📊 Mis Resultados</a></li>
+                            <li><a href="#favoritos" class="profile-nav-link" data-tab="favoritos">💖 Mis Favoritos</a></li>
+                            <li><a href="#seguridad" class="profile-nav-link" data-tab="seguridad">🔒 Seguridad</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <!-- Contenido Principal -->
+                <div class="profile-details">
+                    <!-- Información Personal -->
+                    <section id="informacion" class="profile-section active">
+                        <div class="section-header">
+                            <h2>Información Personal</h2>
+                            <p>Actualiza tu información de contacto y perfil</p>
+                        </div>
+
+                        <form class="profile-form" id="personalInfoForm">
+                            <div class="avatar-section">
+                                <div class="avatar-preview">
+                                    <div class="avatar-circle" id="userAvatar">👤</div>
+                                </div>
+                                <div class="avatar-actions">
+                                    <button type="button" class="btn btn-secondary" onclick="changeAvatar()">Cambiar Avatar</button>
+                                    <p class="avatar-note">Selecciona un emoji para tu avatar</p>
+                                </div>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="fullName">Nombre Completo</label>
+                                    <input type="text" id="fullName" name="fullName" value="Ana García" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Correo Electrónico</label>
+                                    <input type="email" id="email" name="email" value="ana.garcia@email.com" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Teléfono</label>
+                                    <input type="tel" id="phone" name="phone" value="+52 222 123 4567">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="city">Ciudad</label>
+                                    <select id="city" name="city">
+                                        <option value="tlaxcala">Tlaxcala</option>
+                                        <option value="apizaco">Apizaco</option>
+                                        <option value="huamantla">Huamantla</option>
+                                        <option value="chiautempan">Chiautempan</option>
+                                        <option value="otro">Otra</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="bio">Biografía</label>
+                                    <textarea id="bio" name="bio" placeholder="Cuéntanos sobre tu estilo y preferencias..." rows="4">Amante de la moda clásica con toques modernos. Me encanta experimentar con colores tierra y texturas interesantes.</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                                <button type="button" class="btn btn-secondary" onclick="resetForm()">Cancelar</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Preferencias -->
+                    <section id="preferencias" class="profile-section">
+                        <div class="section-header">
+                            <h2>Mis Preferencias</h2>
+                            <p>Configura tus preferencias de estilo y notificaciones</p>
+                        </div>
+
+                        <div class="preferences-grid">
+                            <div class="preference-card">
+                                <h3>🎨 Preferencias de Estilo</h3>
+                                <div class="preference-options">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="style_prefs" value="classic" checked>
+                                        <span>Estilo Clásico</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="style_prefs" value="modern">
+                                        <span>Estilo Moderno</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="style_prefs" value="bohemian" checked>
+                                        <span>Estilo Bohemio</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="style_prefs" value="sporty">
+                                        <span>Estilo Deportivo</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="style_prefs" value="creative">
+                                        <span>Estilo Creativo</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="preference-card">
+                                <h3>🔔 Notificaciones</h3>
+                                <div class="preference-options">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="notifications" value="email" checked>
+                                        <span>Notificaciones por Email</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="notifications" value="new_items" checked>
+                                        <span>Nuevas prendas en catálogo</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="notifications" value="style_tips">
+                                        <span>Consejos de estilo personalizados</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="notifications" value="costureros" checked>
+                                        <span>Nuevos costureros disponibles</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="preference-card">
+                                <h3>🌐 Preferencias de Privacidad</h3>
+                                <div class="preference-options">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="privacy" value="profile_public" checked>
+                                        <span>Perfil público</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="privacy" value="show_tests">
+                                        <span>Mostrar resultados de tests</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="privacy" value="contact_allow" checked>
+                                        <span>Permitir que costureros me contacten</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button class="btn btn-primary" onclick="savePreferences()">Guardar Preferencias</button>
+                        </div>
+                    </section>
+
+                    <!-- Resultados -->
+                    <section id="resultados" class="profile-section">
+                        <div class="section-header">
+                            <h2>Mis Resultados</h2>
+                            <p>Revisa tus resultados de tests y recomendaciones</p>
+                        </div>
+
+                        <div class="results-summary">
+                            <div class="result-card">
+                                <div class="result-icon">🎨</div>
+                                <div class="result-content">
+                                    <h3>Test de Colorimetría</h3>
+                                    <p><strong>Resultado:</strong> Otoño Cálido</p>
+                                    <p><strong>Completado:</strong> 15 de Marzo, 2024</p>
+                                    <div class="result-actions">
+                                        <a href="result-color.html" class="btn btn-primary btn-small">Ver Detalles</a>
+                                        <button class="btn btn-secondary btn-small" onclick="retakeTest('color')">Realizar Nuevamente</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="result-card">
+                                <div class="result-icon">👔</div>
+                                <div class="result-content">
+                                    <h3>Test de Estilo Personal</h3>
+                                    <p><strong>Resultado:</strong> Estilo Clásico</p>
+                                    <p><strong>Completado:</strong> 20 de Marzo, 2024</p>
+                                    <div class="result-actions">
+                                        <a href="result-style.html" class="btn btn-primary btn-small">Ver Detalles</a>
+                                        <button class="btn btn-secondary btn-small" onclick="retakeTest('style')">Realizar Nuevamente</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recommendations-preview">
+                            <h3>Recomendaciones Basadas en Tus Resultados</h3>
+                            <div class="recommendations-list">
+                                <div class="recommendation-item">
+                                    <span class="rec-badge">🎯</span>
+                                    <span>Invierte en prendas atemporales de colores tierra</span>
+                                </div>
+                                <div class="recommendation-item">
+                                    <span class="rec-badge">💡</span>
+                                    <span>Combina piezas estructuradas con accesorios modernos</span>
+                                </div>
+                                <div class="recommendation-item">
+                                    <span class="rec-badge">👗</span>
+                                    <span>Explora vestidos con cortes clásicos y telas de calidad</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Favoritos -->
+                    <section id="favoritos" class="profile-section">
+                        <div class="section-header">
+                            <h2>Mis Favoritos</h2>
+                            <p>Prendas y costureros que has guardado</p>
+                        </div>
+
+                        <div class="favorites-tabs">
+                            <button class="fav-tab active" data-tab="prendas">Prendas (3)</button>
+                            <button class="fav-tab" data-tab="costureros">Costureros (2)</button>
+                        </div>
+
+                        <div class="favorites-content">
+                            <div class="fav-tab-content active" id="prendasFav">
+                                <div class="favorites-grid">
+                                    <!-- Prendas favoritas se cargan dinámicamente -->
+                                </div>
+                            </div>
+                            <div class="fav-tab-content" id="costurerosFav">
+                                <div class="favorites-grid">
+                                    <!-- Costureros favoritos se cargan dinámicamente -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="empty-favorites" id="emptyFavorites" style="display: none;">
+                            <div class="empty-icon">💖</div>
+                            <h3>No tienes favoritos aún</h3>
+                            <p>Explora el catálogo y guarda tus prendas y costureros favoritos</p>
+                            <a href="catalogo.html" class="btn btn-primary">Explorar Catálogo</a>
+                        </div>
+                    </section>
+
+                    <!-- Seguridad -->
+                    <section id="seguridad" class="profile-section">
+                        <div class="section-header">
+                            <h2>Seguridad y Cuenta</h2>
+                            <p>Gestiona la seguridad de tu cuenta</p>
+                        </div>
+
+                        <div class="security-options">
+                            <div class="security-card">
+                                <h3>🔐 Cambiar Contraseña</h3>
+                                <form class="security-form" id="passwordForm">
+                                    <div class="form-group">
+                                        <label for="currentPassword">Contraseña Actual</label>
+                                        <input type="password" id="currentPassword" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="newPassword">Nueva Contraseña</label>
+                                        <input type="password" id="newPassword" minlength="6" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirmPassword">Confirmar Nueva Contraseña</label>
+                                        <input type="password" id="confirmPassword" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Cambiar Contraseña</button>
+                                </form>
+                            </div>
+
+                            <div class="security-card danger">
+                                <h3>⚠️ Zona de Peligro</h3>
+                                <p>Estas acciones no se pueden deshacer</p>
+                                <div class="danger-actions">
+                                    <button class="btn btn-danger" onclick="exportData()">Exportar Mis Datos</button>
+                                    <button class="btn btn-danger" onclick="deleteAccount()">Eliminar Mi Cuenta</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Avatar -->
+    <div class="modal" id="avatarModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2>Seleccionar Avatar</h2>
+                <div class="avatar-grid">
+                    <div class="avatar-option" data-emoji="👤">👤</div>
+                    <div class="avatar-option" data-emoji="👩">👩</div>
+                    <div class="avatar-option" data-emoji="👨">👨</div>
+                    <div class="avatar-option" data-emoji="👧">👧</div>
+                    <div class="avatar-option" data-emoji="👦">👦</div>
+                    <div class="avatar-option" data-emoji="🦸">🦸</div>
+                    <div class="avatar-option" data-emoji="🦹">🦹</div>
+                    <div class="avatar-option" data-emoji="🧙">🧙</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/profile.js"></script>
+</body>
+</html>
