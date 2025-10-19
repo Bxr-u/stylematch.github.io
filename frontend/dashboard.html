@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Dashboard - StyleMatch</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎨 StyleMatch</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="tests.html" class="nav-link">Mis Tests</a></li>
+                <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                <li><a href="costureros.html" class="nav-link">Costureros</a></li>
+                <li><a href="profile.html" class="nav-link">Mi Perfil</a></li>
+                <li><a href="index.html" class="btn-nav">Cerrar Sesión</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>¡Hola, [Usuario]!</h1>
+                <p>Bienvenido a tu espacio personal de estilo</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Card de Tests -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>📊 Mis Tests</h3>
+                        <span class="card-badge">2 completados</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Realiza tests para descubrir tu estilo único</p>
+                        <div class="test-progress">
+                            <div class="progress-item completed">
+                                <span>Test de Colorimetría</span>
+                                <span class="status">✅ Completado</span>
+                            </div>
+                            <div class="progress-item">
+                                <span>Test de Estilo Personal</span>
+                                <span class="status">⏳ Pendiente</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="test-color.html" class="btn btn-primary">Continuar Tests</a>
+                    </div>
+                </div>
+
+                <!-- Card de Recomendaciones -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>👔 Recomendaciones</h3>
+                        <span class="card-badge">12 prendas</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Prendas seleccionadas especialmente para ti</p>
+                        <div class="recommendations-preview">
+                            <div class="preview-item">👕 Camisas</div>
+                            <div class="preview-item">👖 Pantalones</div>
+                            <div class="preview-item">👗 Vestidos</div>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="catalogo.html" class="btn btn-secondary">Ver Catálogo</a>
+                    </div>
+                </div>
+
+                <!-- Card de Costureros -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>🧵 Costureros Cercanos</h3>
+                        <span class="card-badge">5 disponibles</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Artisans locales listos para crear tu ropa ideal</p>
+                        <div class="costureros-list">
+                            <div class="costurero-item">
+                                <strong>María González</strong>
+                                <span>Vestidos de noche</span>
+                            </div>
+                            <div class="costurero-item">
+                                <strong>Juan Pérez</strong>
+                                <span>Ropa casual</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="costureros.html" class="btn btn-secondary">Ver Todos</a>
+                    </div>
+                </div>
+
+                <!-- Card de Avatar -->
+                <div class="dashboard-card featured">
+                    <div class="card-header">
+                        <h3>🎭 Mi Avatar de Estilo</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="avatar-container">
+                            <div class="style-avatar-preview"></div>
+                            <div class="avatar-info">
+                                <h4>Tu paleta de colores:</h4>
+                                <div class="color-palette">
+                                    <div class="color-chip" style="background: #d4a574;"></div>
+                                    <div class="color-chip" style="background: #8b5a2b;"></div>
+                                    <div class="color-chip" style="background: #e6c9a8;"></div>
+                                    <div class="color-chip" style="background: #fdf6e3;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="avatar.html" class="btn btn-primary">Personalizar Avatar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>

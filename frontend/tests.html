@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Tests - StyleMatch</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/tests.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎨 StyleMatch</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="tests.html" class="nav-link active">Mis Tests</a></li>
+                <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                <li><a href="costureros.html" class="nav-link">Costureros</a></li>
+                <li><a href="profile.html" class="nav-link">Mi Perfil</a></li>
+                <li><a href="index.html" class="btn-nav">Cerrar Sesión</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tests-main">
+        <div class="container">
+            <div class="tests-header">
+                <h1>Descubre Tu Estilo Único</h1>
+                <p>Completa estos tests para recibir recomendaciones personalizadas</p>
+            </div>
+
+            <div class="tests-grid">
+                <!-- Test de Colorimetría -->
+                <div class="test-card color-test">
+                    <div class="test-icon">🎨</div>
+                    <div class="test-content">
+                        <h3>Test de Colorimetría</h3>
+                        <p>Descubre qué colores te favorecen más según tu tono de piel, cabello y ojos</p>
+                        <ul class="test-features">
+                            <li>✅ Análisis de temporada (Primavera, Verano, Otoño, Invierno)</li>
+                            <li>✅ Paleta de colores personalizada</li>
+                            <li>✅ Recomendaciones específicas</li>
+                        </ul>
+                        <div class="test-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% completado</span>
+                        </div>
+                    </div>
+                    <div class="test-actions">
+                        <a href="test-color.html" class="btn btn-primary">Comenzar Test</a>
+                        <a href="result-color.html" class="btn btn-secondary" style="display: none;">Ver Resultados</a>
+                    </div>
+                </div>
+
+                <!-- Test de Estilo Personal -->
+                <div class="test-card style-test">
+                    <div class="test-icon">👔</div>
+                    <div class="test-content">
+                        <h3>Test de Estilo Personal</h3>
+                        <p>Identifica tu estilo único: clásico, moderno, bohemio, elegante, etc.</p>
+                        <ul class="test-features">
+                            <li>✅ Identificación de tu estilo dominante</li>
+                            <li>✅ Combinaciones de outfits</li>
+                            <li>✅ Tips personalizados</li>
+                        </ul>
+                        <div class="test-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% completado</span>
+                        </div>
+                    </div>
+                    <div class="test-actions">
+                        <a href="test-style.html" class="btn btn-primary">Comenzar Test</a>
+                        <a href="result-style.html" class="btn btn-secondary" style="display: none;">Ver Resultados</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tests-info">
+                <h3>¿Por qué realizar estos tests?</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h4>🎯 Precisión</h4>
+                        <p>Recomendaciones basadas en tus características únicas</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>💡 Confianza</h4>
+                        <p>Viste con seguridad sabiendo qué te favorece</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>⏱️ Eficiencia</h4>
+                        <p>Ahorra tiempo en compras y selección de outfits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/tests.js"></script>
+</body>
+</html>

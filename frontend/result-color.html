@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - Colorimetría - StyleMatch</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/results.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎨 StyleMatch</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="tests.html" class="nav-link">Mis Tests</a></li>
+                <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                <li><a href="costureros.html" class="nav-link">Costureros</a></li>
+                <li><a href="index.html" class="btn-nav">Cerrar Sesión</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="results-main">
+        <div class="container">
+            <div class="results-header">
+                <h1>¡Tu Paleta de Colores Ideal!</h1>
+                <p>Basado en tus características únicas</p>
+            </div>
+
+            <div class="results-content">
+                <div class="season-card" id="seasonCard">
+                    <div class="season-badge" id="seasonBadge">
+                        <span id="seasonName">Otoño Cálido</span>
+                    </div>
+                    <div class="season-description" id="seasonDescription">
+                        <p>Tus colores ideales son cálidos, terrosos y ricos que complementan tu tono de piel dorado y cabello castaño.</p>
+                    </div>
+                </div>
+
+                <div class="palette-section">
+                    <h2>Tu Paleta de Colores</h2>
+                    <div class="color-palette" id="colorPalette">
+                        <!-- Colores se cargan dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="recommendations-section">
+                    <h2>Recomendaciones para Ti</h2>
+                    <div class="recommendations-grid" id="recommendationsGrid">
+                        <!-- Recomendaciones se cargan dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <a href="catalogo.html" class="btn btn-primary">Ver Prendas Recomendadas</a>
+                    <a href="test-style.html" class="btn btn-secondary">Realizar Test de Estilo</a>
+                    <a href="dashboard.html" class="btn btn-outline">Volver al Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/result-color.js"></script>
+</body>
+</html>
