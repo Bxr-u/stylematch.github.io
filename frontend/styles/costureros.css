@@ -1,0 +1,317 @@
+/* Costureros Styles */
+.costureros-main {
+    padding: 120px 0 40px;
+    min-height: 100vh;
+    background: var(--background);
+}
+
+.costureros-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.costureros-header h1 {
+    color: var(--secondary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.costureros-header p {
+    font-size: 1.2rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+/* Filtros */
+.filters-section {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    align-items: end;
+}
+
+.search-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.search-input {
+    padding: 0.75rem;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--text);
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Grid de costureros */
+.costureros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.costurero-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent);
+}
+
+.costurero-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.costurero-header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.costurero-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--white);
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.costurero-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.costurero-specialty {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.costurero-content {
+    padding: 1.5rem;
+}
+
+.costurero-info {
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.info-item i {
+    color: var(--primary);
+    width: 20px;
+    text-align: center;
+}
+
+.costurero-description {
+    color: var(--text);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.costurero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.stat {
+    background: var(--background);
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.costurero-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-full {
+    flex: 1;
+    min-width: 120px;
+}
+
+/* Modal de contacto mejorado */
+.contact-modal-content {
+    padding: 0;
+}
+
+.contact-header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--white);
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--white);
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.contact-body {
+    padding: 2rem;
+}
+
+.contact-methods {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-method:hover {
+    border-color: var(--primary);
+    background: var(--background);
+    transform: translateX(5px);
+}
+
+.method-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.method-info h4 {
+    margin: 0 0 0.25rem 0;
+    color: var(--secondary);
+}
+
+.method-info p {
+    margin: 0;
+    color: var(--text);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.contact-details {
+    background: var(--background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--accent);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+/* Estados (reutilizados del catálogo) */
+.loading-state,
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+}
+
+.empty-state {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filters-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .costureros-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .costurero-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .costurero-actions {
+        flex-direction: column;
+    }
+    
+    .btn-full {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .costurero-stats {
+        grid-template-columns: 1fr;
+    }
+}

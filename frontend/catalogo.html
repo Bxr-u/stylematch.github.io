@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Prendas - StyleMatch</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/catalogo.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎨 StyleMatch</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="tests.html" class="nav-link">Mis Tests</a></li>
+                <li><a href="catalogo.html" class="nav-link active">Catálogo</a></li>
+                <li><a href="costureros.html" class="nav-link">Costureros</a></li>
+                <li><a href="index.html" class="btn-nav">Cerrar Sesión</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="catalogo-main">
+        <div class="container">
+            <div class="catalogo-header">
+                <h1>Catálogo de Prendas</h1>
+                <p>Descubre prendas que complementan tu estilo único</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label for="categoryFilter">Categoría:</label>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">Todas las categorías</option>
+                        <option value="superior">Prendas Superiores</option>
+                        <option value="inferior">Prendas Inferiores</option>
+                        <option value="vestido">Vestidos</option>
+                        <option value="accesorio">Accesorios</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="styleFilter">Estilo:</label>
+                    <select id="styleFilter" class="filter-select">
+                        <option value="all">Todos los estilos</option>
+                        <option value="clasico">Clásico</option>
+                        <option value="moderno">Moderno</option>
+                        <option value="bohemio">Bohemio</option>
+                        <option value="deportivo">Deportivo</option>
+                        <option value="creativo">Creativo</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="colorFilter">Colorimetría:</label>
+                    <select id="colorFilter" class="filter-select">
+                        <option value="all">Todas las paletas</option>
+                        <option value="primavera">Primavera</option>
+                        <option value="verano">Verano</option>
+                        <option value="otonio">Otoño</option>
+                        <option value="invierno">Invierno</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-secondary" id="resetFilters">Limpiar Filtros</button>
+            </div>
+
+            <!-- Contador de resultados -->
+            <div class="results-info">
+                <span id="resultsCount">Cargando prendas...</span>
+            </div>
+
+            <!-- Grid de prendas -->
+            <div class="prendas-grid" id="prendasGrid">
+                <!-- Las prendas se cargan dinámicamente -->
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading-state" id="loadingState">
+                <div class="loading-spinner"></div>
+                <p>Cargando prendas recomendadas...</p>
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon">👗</div>
+                <h3>No se encontraron prendas</h3>
+                <p>Intenta ajustar los filtros o realizar los tests para obtener recomendaciones personalizadas</p>
+                <a href="tests.html" class="btn btn-primary">Realizar Tests</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Detalles de Prenda -->
+    <div class="modal" id="prendaModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Contenido del modal se carga dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/catalogo.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio de Costureros - StyleMatch</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/costureros.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎨 StyleMatch</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="tests.html" class="nav-link">Mis Tests</a></li>
+                <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                <li><a href="costureros.html" class="nav-link active">Costureros</a></li>
+                <li><a href="index.html" class="btn-nav">Cerrar Sesión</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="costureros-main">
+        <div class="container">
+            <div class="costureros-header">
+                <h1>Directorio de Costureros</h1>
+                <p>Conecta con artesanos locales para crear prendas únicas</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label for="cityFilter">Ciudad:</label>
+                    <select id="cityFilter" class="filter-select">
+                        <option value="all">Todas las ciudades</option>
+                        <option value="tlaxcala">Tlaxcala</option>
+                        <option value="apizaco">Apizaco</option>
+                        <option value="huamantla">Huamantla</option>
+                        <option value="chiautempan">Chiautempan</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="specialtyFilter">Especialidad:</label>
+                    <select id="specialtyFilter" class="filter-select">
+                        <option value="all">Todas las especialidades</option>
+                        <option value="formal">Ropa Formal</option>
+                        <option value="casual">Ropa Casual</option>
+                        <option value="tradicional">Trajes Tradicionales</option>
+                        <option value="novias">Vestidos de Novia</option>
+                        <option value="deportiva">Ropa Deportiva</option>
+                    </select>
+                </div>
+
+                <div class="search-group">
+                    <label for="searchInput">Buscar:</label>
+                    <input type="text" id="searchInput" placeholder="Nombre o especialidad..." class="search-input">
+                </div>
+
+                <button class="btn btn-secondary" id="resetFilters">Limpiar Filtros</button>
+            </div>
+
+            <!-- Contador de resultados -->
+            <div class="results-info">
+                <span id="resultsCount">Cargando costureros...</span>
+            </div>
+
+            <!-- Grid de costureros -->
+            <div class="costureros-grid" id="costurerosGrid">
+                <!-- Los costureros se cargan dinámicamente -->
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading-state" id="loadingState">
+                <div class="loading-spinner"></div>
+                <p>Cargando costureros disponibles...</p>
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon">🧵</div>
+                <h3>No se encontraron costureros</h3>
+                <p>Intenta ajustar los filtros de búsqueda</p>
+                <button class="btn btn-primary" id="resetEmptyFilters">Limpiar Filtros</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Contacto -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="contactModalBody">
+                <!-- Contenido del modal se carga dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/costureros.js"></script>
+</body>
+</html>
