@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Estilo Personal - StyleMatch</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/test.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎨 StyleMatch</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="tests.html" class="nav-link">Mis Tests</a></li>
+                <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                <li><a href="costureros.html" class="nav-link">Costureros</a></li>
+                <li><a href="index.html" class="btn-nav">Salir</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="test-main">
+        <div class="test-container">
+            <!-- Progress Bar -->
+            <div class="test-progress-container">
+                <div class="progress-info">
+                    <span>Test de Estilo Personal</span>
+                    <span id="progressText">Pregunta 1 de 6</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <!-- Question Container -->
+            <div class="question-container" id="questionContainer">
+                <div class="question-header">
+                    <h2 id="questionTitle">¿Cómo describirías tu estilo personal?</h2>
+                    <p id="questionDescription">Selecciona la opción que mejor represente tu forma de vestir</p>
+                </div>
+
+                <div class="options-grid" id="optionsContainer">
+                    <!-- Las opciones se cargan dinámicamente -->
+                </div>
+
+                <div class="test-navigation">
+                    <button class="btn btn-secondary" id="prevBtn" disabled>Anterior</button>
+                    <button class="btn btn-primary" id="nextBtn">Siguiente</button>
+                    <button class="btn btn-success" id="submitBtn" style="display: none;">Ver Mi Estilo</button>
+                </div>
+            </div>
+
+            <!-- Loading Screen -->
+            <div class="loading-container" id="loadingContainer" style="display: none;">
+                <div class="loading-spinner"></div>
+                <h3>Analizando tu estilo...</h3>
+                <p>Estamos identificando tu estilo personal único</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/test-style.js"></script>
+</body>
+</html>

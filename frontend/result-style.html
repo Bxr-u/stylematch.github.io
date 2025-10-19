@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - Estilo Personal - StyleMatch</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/results.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎨 StyleMatch</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="tests.html" class="nav-link">Mis Tests</a></li>
+                <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                <li><a href="costureros.html" class="nav-link">Costureros</a></li>
+                <li><a href="index.html" class="btn-nav">Cerrar Sesión</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="results-main">
+        <div class="container">
+            <div class="results-header">
+                <h1>¡Tu Estilo Personal Descubierto!</h1>
+                <p>Conoce y abraza tu estilo único</p>
+            </div>
+
+            <div class="results-content">
+                <div class="style-card" id="styleCard">
+                    <div class="style-badge" id="styleBadge">
+                        <span id="styleName">Estilo Clásico</span>
+                    </div>
+                    <div class="style-description" id="styleDescription">
+                        <p>Tu estilo se caracteriza por la elegancia atemporal, prendas bien estructuradas y una paleta de colores sofisticada.</p>
+                    </div>
+                </div>
+
+                <div class="style-breakdown">
+                    <h2>Características de Tu Estilo</h2>
+                    <div class="breakdown-grid" id="breakdownGrid">
+                        <!-- Características se cargan dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="recommendations-section">
+                    <h2>Consejos para Tu Estilo</h2>
+                    <div class="recommendations-grid" id="recommendationsGrid">
+                        <!-- Recomendaciones se cargan dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="outfit-inspiration">
+                    <h2>Inspiración para Outfits</h2>
+                    <div class="outfit-grid" id="outfitGrid">
+                        <!-- Inspiración de outfits -->
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <a href="catalogo.html" class="btn btn-primary">Ver Prendas para Mi Estilo</a>
+                    <a href="dashboard.html" class="btn btn-secondary">Volver al Dashboard</a>
+                    <a href="tests.html" class="btn btn-outline">Realizar Otro Test</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/result-style.js"></script>
+</body>
+</html>
