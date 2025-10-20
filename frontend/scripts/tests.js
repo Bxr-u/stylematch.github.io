@@ -1,6 +1,9 @@
 // Tests JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Página de tests cargada');
+    // Verificar autenticación
+     const user = checkAuth();
+    if (!user) return;
     
     // Cargar progreso de tests
     loadTestProgress();

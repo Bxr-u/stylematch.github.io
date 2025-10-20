@@ -1,6 +1,9 @@
 // Test de Estilo Personal JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Test de estilo personal cargado');
+    // Verificar autenticación
+     const user = checkAuth();
+    if (!user) return;
     
     // Inicializar el test
     initStyleTest();

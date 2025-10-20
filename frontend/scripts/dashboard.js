@@ -1,9 +1,21 @@
 // Dashboard JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Dashboard de StyleMatch cargado');
-    
+    // Verificar autenticación
+     const user = checkAuth();
+    if (!user) return;
     // Simular datos del usuario
     loadUserData();
+    // En la función loadUserData, usar datos reales
+async function loadUserData() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user) {
+        document.querySelector('.dashboard-header h1').textContent = `¡Hola, ${user.nombre}!`;
+        
+        // Aquí podrías cargar datos reales del usuario desde una API
+        // Por ejemplo: const userData = await apiService.getUserProfile(user.id);
+    }
+}
     
     // Inicializar componentes del dashboard
     initDashboard();

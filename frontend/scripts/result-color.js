@@ -1,6 +1,9 @@
 // Resultados del Test de Colorimetría JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Página de resultados cargada');
+    // Verificar autenticación
+     const user = checkAuth();
+    if (!user) return;
     
     // Cargar y mostrar resultados
     loadAndDisplayResults();

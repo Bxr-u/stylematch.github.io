@@ -133,5 +133,28 @@
 
     <script src="scripts/main.js"></script>
     <script src="scripts/dashboard.js"></script>
+// En dashboard.html, antes de cerrar </body>
+<script>
+// Verificar si el usuario está logueado
+document.addEventListener('DOMContentLoaded', function() {
+    const user = localStorage.getItem('user');
+    
+    if (!user) {
+        // Si no hay usuario, redirigir al login
+        window.location.href = 'login.html';
+        return;
+    }
+    
+    // Mostrar información del usuario
+    const userData = JSON.parse(user);
+    console.log('Usuario logueado:', userData);
+    
+    // Actualizar la interfaz con el nombre del usuario
+    const userElement = document.getElementById('user-name');
+    if (userElement) {
+        userElement.textContent = userData.nombre;
+    }
+});
+</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
 // StyleMatch - Configuración de la base de datos
 class Config {
-    const DB_HOST = 'localhost';
+    const DB_HOST = '127.0.0.1';
     const DB_NAME = 'stylematch_db';
     const DB_USER = 'root';
     const DB_PASS = '';

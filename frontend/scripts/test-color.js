@@ -1,6 +1,9 @@
 // Test de Colorimetría JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Test de colorimetría cargado');
+    // Verificar autenticación
+     const user = checkAuth();
+    if (!user) return;
     
     // Inicializar el test
     initColorTest();
